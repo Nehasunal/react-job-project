@@ -1,0 +1,26 @@
+vite is built on esbuild, it is a bundler
+
+1. npm create vite@latest
+2. we have changed the port in vite.config.js file using server object : server: {port:3000}
+3. npm install -> to install dependencies
+
+===> Hot Module Replacement (HMR): When you make changes to your React components during development, Vite only reloads the parts of the app that changed, without refreshing the entire page. This gives a very fast feedback loop.
+
+START: FOLDER structure
+1. It is SPA(single page application), so index.html loads in browser.
+2. <div id="root">: This is the placeholder where your entire React app will be injected.
+   React will "take over" this div element and render the app's components inside of it.
+3. <script type="module" src="/src/main.jsx"></script>: This is where Vite links to the main.jsx file (the main entry point of your React app). 
+   Vite uses modern JavaScript modules (type="module") and takes care of loading and bundling files efficiently.
+4. Once index.html loads, it directs the browser to the main.jsx file (the entry point for your React code). 
+   This is where React starts initializing the app.
+5. ReactDOM.createRoot: This is to create a root where React can render the application. It’s attached to the div with the id root that we defined in index.html.
+   root.render(<App />): This line tells React to render the App component (and everything inside it) into the root div. 
+6. App.jsx component is the root component of your application. All other components are typically nested inside this one. 
+
+
+
+
+===========================================================================================
+Every component returns jsx.
+It will return only single element
